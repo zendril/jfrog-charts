@@ -7,6 +7,10 @@
 # Common
 initContainerImage: "alpine:3.8"
 
+installer:
+  type:
+  platform:
+
 # For supporting pulling from private registries
 imagePullSecrets:
 
@@ -182,6 +186,7 @@ artifactory:
   #  - archive-old-artifacts
   #  - build-cleanup
   #  - webhook
+  #  - '{{ template "my-chart.fullname" . }}'
 
   masterKey: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
   ## Alternatively, you can use a pre-existing secret with a key called master-key by specifying masterKeySecretName
